@@ -1,0 +1,29 @@
+#section-4 {
+    @include xl {
+        display: grid;
+        grid-template-areas: ". section-4 .";
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div {
+        background-image: url('../img/section-4/hero.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 420px;
+
+        @include md {
+            background-position-x: -320px;
+            height: 770px;
+        }
+
+        @include lg {
+            background-position-x: 0px;
+            height: 683px;
+        }
+
+        @include xl {
+            grid-area: section-4;
+        }
+    }
+}

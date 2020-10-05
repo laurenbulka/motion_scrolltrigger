@@ -1,0 +1,49 @@
+/* =============
+    Navigation
+============= */
+#nav-container {
+    ul {
+        // text-align: right;
+        height: 100%;
+
+        @include lg {
+            display: flex;
+        }
+
+        li {
+            margin-bottom: 20px;
+
+            @include lg {
+                align-items: center;
+                border-right: 2px solid $black;
+                display: flex;
+                margin-bottom: 0px;
+            }
+
+            a:link,
+            a:visited {
+                color: $white;
+                font-family: 'Roboto Slab', serif;
+                padding: 0 20px;
+                text-decoration: none;
+
+                @include lg {
+                    color: $black;
+                }
+            }
+
+            a:hover,
+            a:active {
+                color: $yellow;
+            }
+        }
+
+        li:first-child {
+            border: none;
+        }
+
+        li:last-child {
+            border: none;
+        }
+    }
+}

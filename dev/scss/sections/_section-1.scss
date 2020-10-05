@@ -1,0 +1,16 @@
+#section-1 {
+    overflow: hidden;
+    height: 360px;
+
+    @include md {
+        height: 683px;
+    }
+
+    >div{
+        background-image: url('../img/section-1/hero.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+    
+    }
+}

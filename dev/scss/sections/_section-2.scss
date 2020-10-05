@@ -1,0 +1,137 @@
+/* =============
+    Section-2
+============= */
+#section-2 {
+    display: grid;
+    grid-template-areas: ". section-2 .";
+    grid-template-columns: 10px auto 10px;
+    padding: 60px 0;
+
+    @include lg {
+        padding: 100px 0;
+    }
+
+    @include xl {
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div {
+        grid-area: section-2;
+
+        #section-2-first {
+            text-align: center;
+
+            @include md {
+                display: grid;
+                grid-template-areas: ". section-2-first .";
+                grid-template-columns: 10% auto 10%;
+            }
+
+            >div {
+                @include md {
+                    grid-area: section-2-first;
+                }
+
+                h1 {
+                    color: $yellow;
+                    font-family: 'Comfortaa', cursive;
+                    font-size: rem-calc(48);
+                    font-weight: 700;
+                    line-height: rem-calc(46);
+                    margin: 40px 0 30px;
+
+                    @include md {
+                        font-size: rem-calc(55);
+                        line-height: rem-calc(56);
+                        margin-bottom: 34px;
+                    }
+
+                    @include lg {
+                        font-size: rem-calc(66);
+                    }
+
+                    span {
+                        display: block;
+                        font-size: rem-calc(31);
+
+                        @include md {
+                            font-size: rem-calc(42);
+                        }
+
+                        @include lg {
+                            font-size: rem-calc(54);
+                        }
+                    }
+                }
+
+                h4 {
+                    font-size: rem-calc(17);
+                    font-weight: 400;
+                }
+            }
+        }
+
+        #section-2-middle {
+            @include lg {
+                display: grid;
+                grid-template-areas: ". section-2-middle .";
+                grid-template-columns: 20% auto 20%;
+            }
+
+            >div {
+                @include lg {
+                    grid-area: section-2-middle;
+                }
+
+                p {
+                    font-size: rem-calc(18);
+                    font-weight: 600;
+                    line-height: rem-calc(22);
+                    margin-top: 25px;
+                    text-align: justify;
+
+                    @include md {
+                        line-height: rem-calc(26);
+                        margin-top: 34px;
+                    }
+                }
+            }
+        }
+
+        #section-2-last {
+            @include md {
+                display: grid;
+                grid-template-areas: ". section-2-last .";
+                grid-template-columns: 10% auto 10%;
+            }
+
+            @include lg {
+                grid-template-columns: 25% auto 25%;
+            }
+
+            >div {
+                @include md {
+                    grid-area: section-2-last;
+                }
+
+                h3 {
+                    font-size: rem-calc(16);
+                    margin-top: 25px;
+
+                    @include md {
+                        margin-top: 80px;
+                    }
+
+                    @include lg {
+                        margin-top: 100px;
+                    }
+                }
+
+                p {
+                    line-height: rem-calc(22);
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

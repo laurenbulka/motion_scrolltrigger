@@ -1,0 +1,75 @@
+/* =============
+    Header
+============= */
+header {
+    background-color: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    >div {
+        display: grid;
+        grid-template-areas: "burger survival"
+            "nav nav";
+        grid-template-columns: 20% auto;
+
+        @include lg {
+            grid-template-areas: "nav survival";
+            grid-template-columns: 20% auto;
+        }
+
+        #logo-container {
+            grid-area: survival;
+            padding: 10px;
+            text-align: right;
+
+            a:link,
+            a:visited {
+                background-color: $yellow;
+                border-radius: 23px;
+                color: $black;
+                display: inline-block;
+                font-size: rem-calc(18);
+                font-weight: 700;
+                padding: 10px 20px;
+            }
+
+            a:hover,
+            a:active {
+                background-color: $black;
+                color: $white;
+            }
+        }
+
+        #burger-container {
+            // justify-content: flex-end;
+            align-items: center;
+            display: flex;
+            grid-area: burger;
+            padding: 10px;
+
+            @include lg {
+                display: none !important;
+            }
+
+            i {
+                cursor: pointer;
+                font-size: rem-calc(30);
+            }
+        }
+
+        #nav-container {
+            background-color: $black;
+            display: none;
+            grid-area: nav;
+            padding: 10px;
+
+            @include lg {
+                background-color: $white;
+                display: block !important;
+            }
+        }
+    }
+}

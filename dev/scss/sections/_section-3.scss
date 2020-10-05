@@ -1,0 +1,123 @@
+/* =============
+    Section-3
+============= */
+#section-3 {
+    @include xl {
+        display: grid;
+        grid-template-areas: ". section-3 .";
+        grid-template-columns: auto 1200px auto;
+    }
+
+    >div {
+        @include lg {
+            display: grid;
+            grid-template-columns: 40% auto;
+        }
+
+        @include xl {
+            grid-area: section-3;
+        }
+
+        aside {
+            background-image: url('../img/section-3/robot.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 380px;
+
+            @include md {
+                height: 476px;
+            }
+
+            @include lg {
+                height: auto;
+            }
+        }
+
+        #section-3-container {
+            background-color: $charcoal;
+            color: $white;
+            display: grid;
+            grid-template-areas: ". section-2 .";
+            grid-template-columns: 10px auto 10px;
+            padding: 60px 0;
+
+            @include md {
+                grid-template-columns: 10% auto 10%;
+            }
+
+            @include lg {
+                padding: 25px 0 44px;
+            }
+
+            #section-3-content {
+                grid-area: section-2;
+
+                h1 {
+                    font-family: 'Comfortaa', cursive;
+                    font-size: rem-calc(21);
+                    line-height: rem-calc(26);
+                    margin-bottom: 35px;
+                }
+
+                p {
+                    font-size: rem-calc(18);
+                    line-height: rem-calc(26);
+                }
+
+                ul {
+                    li {
+                        margin-top: 46px;
+
+                        @include md {
+                            margin-top: 51px;
+                        }
+
+                        .top {
+                            display: flex;
+
+                            h5 {
+                                font-size: rem-calc(18);
+                                font-weight: 400;
+                            }
+
+                            h4 {
+                                font-size: rem-calc(18);
+                                margin-left: auto;
+                            }
+                        }
+
+                        .bottom {
+                            background-color: $black;
+                            height: 9px;
+                            margin-top: 5px;
+                            width: 100%;
+
+                            >div {
+                                background-color: $yellow;
+                                height: 9px;
+                            }
+                        }
+                    }
+
+                    #emotion {
+                        .yellow-bar {
+                            width: 64%;
+                        }
+                    }
+
+                    #learning {
+                        .yellow-bar {
+                            width: 90%;
+                        }
+                    }
+
+                    #math {
+                        .yellow-bar {
+                            width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
